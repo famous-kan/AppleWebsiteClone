@@ -7,6 +7,7 @@ import {
     NavigationMenuList,
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
+    NavigationMenuViewport,
   } from "@/components/ui/navigation-menu"
 import { Link } from 'react-router-dom'
 
@@ -15,9 +16,9 @@ const Navbar = () => {
   return (
     <div className="relative px-0">
     <div className="bg-[#f5f5f7] container flex h-14 items-center m-0 p-0 ">
-      <NavigationMenu className='relative w-full ' onValueChange={setActiveItem}>
+    <NavigationMenu className='relative w-full [--background:transparent] [--viewport-padding:12px]' onValueChange={setActiveItem}>
         <NavigationMenuList className='mb-0 flex gap-2 w-full mx-[100px]'>
-
+ 
         {/* /////////////////////////////// */}
           <NavigationMenuItem>
             <Link href="https://www.apple.com/" className='m-[50px]'>
@@ -29,53 +30,127 @@ const Navbar = () => {
             </Link>
           </NavigationMenuItem>
           {/* /////////////////////////////// */}
-          <NavigationMenuItem className='bg-purple-400'>
-            <NavigationMenuTrigger className='w-[50px] bg-[#f5f5f7] [&>svg]:hidden'>Store</NavigationMenuTrigger>
-            <NavigationMenuContent className='w-screen bg-pink-400 border-none rounded-3xl'>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-screen md:grid-cols-2 rounded-none ">
-                <p href="/products/software" title="Software">
-                  Our cutting-edge software solutions.
-                </p>
-                <p href="/products/hardware" title="Hardware">
-                  High-quality hardware products.
-                </p>
-                <p href="/products/services" title="Services">
-                  Professional services and support.
-                </p>
+          <NavigationMenuItem className=''>
+          <NavigationMenuTrigger className='w-[50px] bg-[#f5f5f7] [&>svg]:hidden'>
+            Store
+          </NavigationMenuTrigger >
+          <NavigationMenuContent className='absolute left-0 top-2 '>
+              <ul className="grid w-[400px] mx-[200px] gap-5 p-2 md:w-screen md:grid-cols-3 ">
+
+                  <div className='flex gap-12 pb-5 w-screen'>
+
+                  <div className=' flex flex-col gap-1 mx-2  '>
+                      <p className='text-slate-400'>Shop</p>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">Shop the Latest</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">Mac</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">iPad</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">iPhone</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">Apple Watch</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">Apple Vision Pro</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">Accessories</Link>
+                  </div>
+
+                  <div className=' flex flex-col gap-1 '>
+                      <p className='text-slate-400'>Quick Links</p>
+                     <Link to="/" className="text-sm font-bold  no-underline text-black">Shop Holiday Gift</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Find a Store</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Order Status</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Apple Trade In</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Financing</Link>
+                  </div>
+
+                  <div className=' flex flex-col gap-1  '>
+                      <p className='text-slate-400'>Shop Special Stores</p>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Certified Refurbished</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Education</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Business</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Veterans and Military</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Government</Link>
+                  </div>
+                  </div>
               </ul>
             </NavigationMenuContent>
-          </NavigationMenuItem>
+
+
+
+        </NavigationMenuItem>
           {/* /////////////////////////////// */}
           <NavigationMenuItem>
             <NavigationMenuTrigger className='w-[50px] bg-[#f5f5f7] [&>svg]:hidden'>Mac</NavigationMenuTrigger>
-            <NavigationMenuContent className='absolute left-0 w-screen'>
-              <ul className=" w-[400px] gap-3 p-4 md:w-[1000px] md:grid-cols-2">
-                <p href="/about" title="About Us">
-                  Learn more about our company and mission.
-                </p>
-                <p href="/team" title="Our Team">
-                  Meet the people behind our success.
-                </p>
-                <p href="/careers" title="Careers">
-                  Join our team and grow with us.
-                </p>
+            <NavigationMenuContent className='absolute left-0 top-2 '>
+              <ul className="grid w-[400px] mx-[200px] gap-5 p-2 md:w-screen md:grid-cols-3 ">
+
+                  <div className='flex gap-12 pb-5 w-screen'>
+
+                  <div className=' flex flex-col gap-1 mx-2  '>
+                      <p className='text-slate-400'>Shop</p>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">Shop the Latest</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">Mac</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">iPad</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">iPhone</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">Apple Watch</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">Apple Vision Pro</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">Accessories</Link>
+                  </div>
+
+                  <div className=' flex flex-col gap-1 '>
+                      <p className='text-slate-400'>Quick Links</p>
+                     <Link to="/" className="text-sm font-bold  no-underline text-black">Shop Holiday Gift</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Find a Store</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Order Status</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Apple Trade In</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Financing</Link>
+                  </div>
+
+                  <div className=' flex flex-col gap-1  '>
+                      <p className='text-slate-400'>Shop Special Stores</p>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Certified Refurbished</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Education</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Business</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Veterans and Military</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Government</Link>
+                  </div>
+                  </div>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
           {/* /////////////////////////////// */}
           <NavigationMenuItem>
             <NavigationMenuTrigger className='w-[50px] bg-[#f5f5f7] [&>svg]:hidden'>iPad</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                <p href="/about" title="About Us">
-                  Learn more about our company and mission.
-                </p>
-                <p href="/team" title="Our Team">
-                  Meet the people behind our success.
-                </p>
-                <p href="/careers" title="Careers">
-                  Join our team and grow with us.
-                </p>
+            <NavigationMenuContent className='absolute left-0 top-2 '>
+              <ul className="grid w-[400px] mx-[200px] gap-5 p-2 md:w-screen md:grid-cols-3 ">
+
+                  <div className='flex gap-12 pb-5 w-screen'>
+
+                  <div className=' flex flex-col gap-1 mx-2  '>
+                      <p className='text-slate-400'>Shop</p>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">Shop the Latest</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">Mac</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">iPad</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">iPhone</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">Apple Watch</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">Apple Vision Pro</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">Accessories</Link>
+                  </div>
+
+                  <div className=' flex flex-col gap-1 '>
+                      <p className='text-slate-400'>Quick Links</p>
+                     <Link to="/" className="text-sm font-bold  no-underline text-black">Shop Holiday Gift</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Find a Store</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Order Status</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Apple Trade In</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Financing</Link>
+                  </div>
+
+                  <div className=' flex flex-col gap-1  '>
+                      <p className='text-slate-400'>Shop Special Stores</p>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Certified Refurbished</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Education</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Business</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Veterans and Military</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Government</Link>
+                  </div>
+                  </div>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
@@ -83,26 +158,50 @@ const Navbar = () => {
           <NavigationMenuItem>
             <NavigationMenuTrigger className='w-[50px] bg-[#f5f5f7]
              [&>svg]:hidden'>iPhone</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                <p href="/about" title="About Us">
-                  Learn more about our company and mission.
-                </p>
-                <p href="/team" title="Our Team">
-                  Meet the people behind our success.
-                </p>
-                <p href="/careers" title="Careers">
-                  Join our team and grow with us.
-                </p>
+               <NavigationMenuContent className='absolute left-0 top-2 '>
+              <ul className="grid w-[400px] mx-[200px] gap-5 p-2 md:w-screen md:grid-cols-3 ">
+
+                  <div className='flex gap-12 pb-5 w-screen'>
+
+                  <div className=' flex flex-col gap-1 mx-2  '>
+                      <p className='text-slate-400'>Shop</p>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">Shop the Latest</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">Mac</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">iPad</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">iPhone</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">Apple Watch</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">Apple Vision Pro</Link>
+                     <Link to="/" className="text-2xl font-bold no-underline text-black">Accessories</Link>
+                  </div>
+
+                  <div className=' flex flex-col gap-1 '>
+                      <p className='text-slate-400'>Quick Links</p>
+                     <Link to="/" className="text-sm font-bold  no-underline text-black">Shop Holiday Gift</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Find a Store</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Order Status</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Apple Trade In</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Financing</Link>
+                  </div>
+
+                  <div className=' flex flex-col gap-1  '>
+                      <p className='text-slate-400'>Shop Special Stores</p>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Certified Refurbished</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Education</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Business</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Veterans and Military</Link>
+                     <Link to="/" className="text-sm font-bold no-underline text-black">Government</Link>
+                  </div>
+                  </div>
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
           {/* /////////////////////////////// */}
         </NavigationMenuList>
+        <NavigationMenuViewport className='absolute top-[-20px] border-white shadow-none rounded-none left-0 w-full origin-top-center [--viewport-padding:12px]' />
       </NavigationMenu>
       <div className="ml-auto flex items-center space-x-4">
-        <p variant="ghost">Log in</p>
-        <p>Sign up</p>
+      <svg height="48" viewBox="0 0 17 48" width="17" xmlns="http://www.w3.org/2000/svg"><path d="m16.2294 29.9556-4.1755-4.0821a6.4711 6.4711 0 1 0 -1.2839 1.2625l4.2005 4.1066a.9.9 0 1 0 1.2588-1.287zm-14.5294-8.0017a5.2455 5.2455 0 1 1 5.2455 5.2527 5.2549 5.2549 0 0 1 -5.2455-5.2527z"></path></svg>
+      <svg height="48" viewBox="0 0 17 48" width="17" xmlns="http://www.w3.org/2000/svg"><path d="m13.4575 16.9268h-1.1353a3.8394 3.8394 0 0 0 -7.6444 0h-1.1353a2.6032 2.6032 0 0 0 -2.6 2.6v8.9232a2.6032 2.6032 0 0 0 2.6 2.6h9.915a2.6032 2.6032 0 0 0 2.6-2.6v-8.9231a2.6032 2.6032 0 0 0 -2.6-2.6001zm-4.9575-2.2768a2.658 2.658 0 0 1 2.6221 2.2764h-5.2442a2.658 2.658 0 0 1 2.6221-2.2764zm6.3574 13.8a1.4014 1.4014 0 0 1 -1.4 1.4h-9.9149a1.4014 1.4014 0 0 1 -1.4-1.4v-8.9231a1.4014 1.4014 0 0 1 1.4-1.4h9.915a1.4014 1.4014 0 0 1 1.4 1.4z"></path></svg>
       </div>
     </div>
     {activeItem && (
