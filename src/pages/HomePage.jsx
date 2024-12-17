@@ -3,8 +3,8 @@ import iPhone16pro from '../assets/iPhone16pro.mp4'
 import { Button } from 'react-bootstrap'
 import Applegift from '../assets/Applegift.mp4'
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import ImageSlide from '@/components/ImageSlide';
+import RunningImg from '@/components/RunningImg';
 
 const HomePage = () => {
   return (
@@ -66,8 +66,8 @@ const HomePage = () => {
         <div className='py-8'>
 
             <div className='grid md:grid-cols-2 gap-1 p-2  '>
-
-                <div className='relative  flex justify-center items-center'>
+               {/* ///////////////////// */}
+                <div className='relative flex justify-center items-center md:h-[570px] overflow-hidden '>
                     <div className=' absolute top-10 flex flex-col justify-center items-center gap-3'>
                         <img src="https://www.apple.com/v/home/bw/images/logos/ipad-air/promo_logo_ipadair_ai__gikal75essya_medium.png" 
                         alt="" 
@@ -80,32 +80,127 @@ const HomePage = () => {
                         </div>
                     </div>
 
-                    <img src="https://www.apple.com/v/home/bw/images/promos/ipad-air/promo_ipadair_ai__3fv1eitzqv6y_medium.jpg" 
+                    <img src="https://www.apple.com/v/home/bw/images/promos/ipad-air/promo_ipadair_ai__3fv1eitzqv6y_large.jpg" 
                     alt="" 
                     srcset=""
-                    className='w-full md:h-[570px] p-1'
+                    className='w-full h-full object-cover p-1'
                     />
                         <span className="bg-gradient-to-r from-blue-500 via-pink-500 to-orange-500 text-transparent bg-clip-text font-bold absolute bottom-10">Hello, Apple Intelligence.</span>
                 </div>
-
-                <div className=' flex justify-center items-start md:h-[570px] overflow-hidden'>
-                    <img src="https://www.apple.com/v/home/bw/images/promos/airpods-pro-2/promo_airpods_pro_2_avail__vkitqi3okwie_medium.jpg"
+                {/* ///////////////////// */}
+                <div className='relative flex justify-center items-start md:h-[570px] overflow-hidden'>
+                    <img src="https://www.apple.com/v/home/bw/images/promos/airpods-pro-2/promo_airpods_pro_2_avail__vkitqi3okwie_large.jpg"
                       alt="" 
                       srcset=""
-                      className='w-full p-1 aspect-auto'
+                      className='w-full h-full object-cover p-1'
                       />
+                    <div className='absolute bottom-7 left-1/2 text-center transform -translate-x-1/2'>
+                        <h1 className='text-white'>Airpod Pro 2</h1>
+                        <p className='text-white text-xl'>Now with a Hearing Aid feature. <sup>1</sup></p>
+                        <div className='flex gap-2 justify-center'>
+                        <Button variant='primary' href="/" className=' rounded-pill h-10 ' >Learn more</Button>
+                        <Button variant='outline-primary' href="/" className=' rounded-pill h-10 w-16' >Buy</Button>
+                        </div>
+                    </div>
+                   
+                </div>
+                {/* ///////////////////// */}
+
+                <div className='relative flex justify-center items-center md:h-[570px] overflow-hidden'>
+                    <div className=' absolute top-14 flex flex-col justify-center items-center gap-3'>
+                        <img src="https://www.apple.com/v/home/bw/images/logos/apple-watch-series-10/promo_logo_apple_watch_series_10__qk5vaa89vnm2_medium.png" 
+                        alt="" 
+                        className='w-[140px]'
+                        />
+                        <span className="gradient text-[20px] ">Thinstant classic</span>
+                        <div className='flex gap-2'>
+                            <Button variant='primary' href="/" className=' rounded-pill h-10 ' >Learn more</Button>
+                            <Button variant='outline-primary' href="/" className=' rounded-pill h-10 w-16' >Buy</Button>
+                        </div>
+                    </div>
+
+                    <img src="https://www.apple.com/v/home/bw/images/promos/apple-watch-series-10/promo_apple_watch_series_10_avail_lte__c70y29goir42_large.jpg" 
+                    alt="" 
+                    srcset=""
+                    className='w-full h-full object-cover p-1'
+                    />
                 </div>
 
-                <div>
-                    1
+
+                  {/* ///////////////////// */}
+                  <div className='relative flex justify-center items-center md:h-[570px] overflow-hidden'>
+                    <div className=' absolute top-14 flex flex-col justify-center items-center gap-2.5'>
+                        <span className='text-4xl font-bold'>MacBook Air</span>
+                        <span className="gradient text-[20px] ">Lean.Mean.M3 machine</span>
+                        <div className='flex gap-2'>
+                            <Button variant='primary' href="/" className=' rounded-pill h-10 ' >Learn more</Button>
+                            <Button variant='outline-primary' href="/" className=' rounded-pill h-10 w-16' >Buy</Button>
+                        </div>
+                    </div>
+
+                    <img src="https://www.apple.com/v/home/bw/images/promos/macbook-air-m3/promo_macbook_air_m3__e43jegok3wuq_large.jpg" 
+                    alt="" 
+                    srcset=""
+                    className='w-full h-full object-cover p-1'
+                    />
                 </div>
-                <div>
-                    2
+                  {/* ///////////////////// */}
+                  <div className='relative flex justify-center items-center md:h-[570px] overflow-hidden'>
+                    <div className=' absolute top-14 flex flex-col justify-center items-center gap-2.5'>
+                        <img 
+                        src="https://www.apple.com/v/home/bw/images/logos/iphone-tradein/promo_logo_iphone_tradein__7y3gtai5az66_medium.png" 
+                        className='w-[150px]'
+                        alt="" />
+                         <div className='flex flex-col gap-0 justify-center items-center'>
+                        <span className="gradient text-[20px] ">Get $180-$650 in credit when you</span>
+                        <span className="gradient text-[20px] ">trade in iPhone 12 or higher.<sup>2</sup></span>
+                        </div>
+                        <Button variant='primary' href="/" className=' rounded-pill h-10 '>Get your estimate</Button>
+                        
+                    </div>
+
+                    <img src="https://www.apple.com/v/home/bw/images/promos/iphone-tradein/promo_iphone_tradein__bugw15ka691e_large.jpg" 
+                    alt="" 
+                    srcset=""
+                    className='w-full h-full object-cover p-1'
+                    />
                 </div>
-                
-            </div>
-        
+                  {/* ///////////////////// */}
+                  <div className='relative flex justify-center items-center md:h-[570px] overflow-hidden'>
+                    <div className=' absolute top-14 flex flex-col justify-center items-center gap-2.5'>
+                       <img 
+                        src="https://www.apple.com/v/home/bw/images/logos/apple-card/logo__dcojfwkzna2q_medium.png" 
+                        className='w-[110px]'
+                        alt="" />
+                        <div className='flex flex-col gap-0 justify-center items-center'>
+                        <span className="gradient text-[20px] ">Get up to 3% Daily Cash back</span>
+                        <span className="gradient text-[20px] ">with every purchase.</span>
+                        </div>
+                        <div className='flex gap-2'>
+                            <Button variant='primary' href="/" className=' rounded-pill h-10 ' >Learn more</Button>
+                            <Button variant='outline-primary' href="/" className=' rounded-pill h-10 w-fit' >Apply now</Button>
+                        </div>
+                    </div>
+
+                    <img src="https://www.apple.com/v/home/bw/images/promos/apple-card/promo_apple_card__5cm7draujpey_large.jpg" 
+                    alt="" 
+                    srcset=""
+                    className='w-full h-full object-cover p-1'
+                    />
+                </div>
+
+                {/* /////////////จบgrid//////// */}
+            </div> 
         </div>
+
+        <div>
+            <ImageSlide />
+        </div>
+
+        <div>
+            <RunningImg />
+        </div>
+
 
 
     </div>

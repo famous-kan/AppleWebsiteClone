@@ -6,11 +6,11 @@ import Footer from '../components/Footer'
 const Layout = () => {
   return (
     <div className='flex flex-col min-h-screen'>
-        <div className='bg-[#f5f5f7]'><Navbar /></div>
+        <div className='bg-[#f5f5f7] w-full'><Navbar /></div>
 
-        <div className='bg-white flex-1'><Outlet /></div>
+        <div className='bg-white flex-1 pt-12'><Outlet /></div>
             
-        <div className='bg-red-500'><Footer /></div>
+        <div className='bg-[#f5f5f7]'><Footer /></div>
         
     </div>
   )
