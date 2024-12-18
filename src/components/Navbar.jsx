@@ -4,10 +4,16 @@ import { Link } from 'react-router-dom'
 import NavItem from './NavItem'
 
 const Navbar = () => {
-    
+  const [isHover, setIsHover] = useState(false)
+
+
   return (
     
-    <div className=' fixed top-0 flex shadow-lg h-12 w-full bg-white/75 backdrop-blur-sm z-50'>
+    <div className={`fixed top-0 flex shadow-lg h-12 w-full transition-colors duration-500 ${isHover ? 'bg-white ease-in-out ' : 'bg-white/75 backdrop-blur-sm'} z-50`}
+    onMouseEnter={() => setIsHover(true)}
+    onMouseLeave={() => setIsHover(false)}
+      
+    >
         
         <ul className="flex space-x-4 justify-center mx-auto items-center m-0 p-0"> 
 
@@ -36,7 +42,7 @@ const Navbar = () => {
               isLarge: false,
               subitems: [
                 { label: 'Shop Holiday Gifts', href: '/' },
-                { label: 'Find a Store', href: '/products/clothing/womens' },
+                { label: 'Find a Store', href: '/' },
                 { label: 'Order Status ', href: '/' },
                 { label: 'Apple Trade In ', href: '/' },
                 { label: 'Financing', href: '/' },
@@ -47,15 +53,495 @@ const Navbar = () => {
               isLarge: false,
               subitems: [
                 { label: 'Certified Refurbished', href: '/' },
-                { label: 'Education', href: '/products/clothing/womens' },
+                { label: 'Education', href: '/' },
                 { label: 'Business', href: '/' },
                 { label: 'Veterans and Military', href: '/' },
                 { label: 'Governemt', href: '/' },
               ]
             },
 
-          ]}
-        />
+            ]}
+           />
+          <NavItem
+          label="Mac" 
+          items={[
+            { 
+              label: 'Explore Mac', 
+              isLarge: true,
+              subitems: [
+                { label: 'Explore All Mac', href: "/" },
+                { label: 'MacBook Air', href: '/' },
+                { label: 'MacBook Pro', href: '/' },
+                { label: 'iMac', href: '/' },
+                { label: 'Mac mini', href: '/' },
+                { label: 'Mac Studio', href: '/' },
+                { label: 'Mac Pro', href: '/' },
+                { label: 'Display', href: '/' },
+              ]
+            },
+            { 
+              label: 'Shop Mac', 
+              isLarge: false,
+              subitems: [
+                { label: 'Shop Mac', href: '/' },
+                { label: 'Help Me Choose', href: '/' },
+                { label: 'Mac Accessories', href: '/' },
+                { label: 'Apple Trade In', href: '/' },
+                { label: 'Financing', href: '/' },
+              ]
+            },
+            { 
+              label: 'More from Mac', 
+              isLarge: false,
+              subitems: [
+                { label: 'Mac Support', href: '/' },
+                { label: 'AppleCare+ for Mac', href: '/' },
+                { label: 'macOS Sequoia', href: '/' },
+                { label: 'Apple intelligence', href: '/' },
+                { label: 'Apps by Apple', href: '/' },
+                { label: 'Continuity', href: '/' },
+                { label: 'iCloud+', href: '/' },
+                { label: 'Mac for Business', href: '/' },
+                { label: 'Education', href: '/' },
+              ]
+            },
+
+            ]}
+           />
+          {/* ///////////////3/////// */}
+          <NavItem
+          label="iPad" 
+          items={[
+            { 
+              label: 'Explore Mac', 
+              isLarge: true,
+              subitems: [
+                { label: 'Explore All Mac', href: "/" },
+                { label: 'MacBook Air', href: '/' },
+                { label: 'MacBook Pro', href: '/' },
+                { label: 'iMac', href: '/' },
+                { label: 'Mac mini', href: '/' },
+                { label: 'Mac Studio', href: '/' },
+                { label: 'Mac Pro', href: '/' },
+                { label: 'Display', href: '/' },
+              ]
+            },
+            { 
+              label: 'Shop Mac', 
+              isLarge: false,
+              subitems: [
+                { label: 'Shop Mac', href: '/' },
+                { label: 'Help Me Choose', href: '/' },
+                { label: 'Mac Accessories', href: '/' },
+                { label: 'Apple Trade In', href: '/' },
+                { label: 'Financing', href: '/' },
+              ]
+            },
+            { 
+              label: 'More from Mac', 
+              isLarge: false,
+              subitems: [
+                { label: 'Mac Support', href: '/' },
+                { label: 'AppleCare+ for Mac', href: '/' },
+                { label: 'macOS Sequoia', href: '/' },
+                { label: 'Apple intelligence', href: '/' },
+                { label: 'Apps by Apple', href: '/' },
+                { label: 'Continuity', href: '/' },
+                { label: 'iCloud+', href: '/' },
+                { label: 'Mac for Business', href: '/' },
+                { label: 'Education', href: '/' },
+              ]
+            },
+
+            ]}
+           />
+          {/* //////////////4/////// */}
+          <NavItem
+          label="iPhone" 
+          items={[
+            { 
+              label: 'Explore Mac', 
+              isLarge: true,
+              subitems: [
+                { label: 'Explore All Mac', href: "/" },
+                { label: 'MacBook Air', href: '/' },
+                { label: 'MacBook Pro', href: '/' },
+                { label: 'iMac', href: '/' },
+                { label: 'Mac mini', href: '/' },
+                { label: 'Mac Studio', href: '/' },
+                { label: 'Mac Pro', href: '/' },
+                { label: 'Display', href: '/' },
+              ]
+            },
+            { 
+              label: 'Shop Mac', 
+              isLarge: false,
+              subitems: [
+                { label: 'Shop Mac', href: '/' },
+                { label: 'Help Me Choose', href: '/' },
+                { label: 'Mac Accessories', href: '/' },
+                { label: 'Apple Trade In', href: '/' },
+                { label: 'Financing', href: '/' },
+              ]
+            },
+            { 
+              label: 'More from Mac', 
+              isLarge: false,
+              subitems: [
+                { label: 'Mac Support', href: '/' },
+                { label: 'AppleCare+ for Mac', href: '/' },
+                { label: 'macOS Sequoia', href: '/' },
+                { label: 'Apple intelligence', href: '/' },
+                { label: 'Apps by Apple', href: '/' },
+                { label: 'Continuity', href: '/' },
+                { label: 'iCloud+', href: '/' },
+                { label: 'Mac for Business', href: '/' },
+                { label: 'Education', href: '/' },
+              ]
+            },
+
+            ]}
+           />
+          {/* //////////////5/////// */}
+          <NavItem
+          label="Watch" 
+          items={[
+            { 
+              label: 'Explore Mac', 
+              isLarge: true,
+              subitems: [
+                { label: 'Explore All Mac', href: "/" },
+                { label: 'MacBook Air', href: '/' },
+                { label: 'MacBook Pro', href: '/' },
+                { label: 'iMac', href: '/' },
+                { label: 'Mac mini', href: '/' },
+                { label: 'Mac Studio', href: '/' },
+                { label: 'Mac Pro', href: '/' },
+                { label: 'Display', href: '/' },
+              ]
+            },
+            { 
+              label: 'Shop Mac', 
+              isLarge: false,
+              subitems: [
+                { label: 'Shop Mac', href: '/' },
+                { label: 'Help Me Choose', href: '/' },
+                { label: 'Mac Accessories', href: '/' },
+                { label: 'Apple Trade In', href: '/' },
+                { label: 'Financing', href: '/' },
+              ]
+            },
+            { 
+              label: 'More from Mac', 
+              isLarge: false,
+              subitems: [
+                { label: 'Mac Support', href: '/' },
+                { label: 'AppleCare+ for Mac', href: '/' },
+                { label: 'macOS Sequoia', href: '/' },
+                { label: 'Apple intelligence', href: '/' },
+                { label: 'Apps by Apple', href: '/' },
+                { label: 'Continuity', href: '/' },
+                { label: 'iCloud+', href: '/' },
+                { label: 'Mac for Business', href: '/' },
+                { label: 'Education', href: '/' },
+              ]
+            },
+
+            ]}
+           />
+          {/* //////////////6/////// */}
+          <NavItem
+          label="Vision" 
+          items={[
+            { 
+              label: 'Explore Mac', 
+              isLarge: true,
+              subitems: [
+                { label: 'Explore All Mac', href: "/" },
+                { label: 'MacBook Air', href: '/' },
+                { label: 'MacBook Pro', href: '/' },
+                { label: 'iMac', href: '/' },
+                { label: 'Mac mini', href: '/' },
+                { label: 'Mac Studio', href: '/' },
+                { label: 'Mac Pro', href: '/' },
+                { label: 'Display', href: '/' },
+              ]
+            },
+            { 
+              label: 'Shop Mac', 
+              isLarge: false,
+              subitems: [
+                { label: 'Shop Mac', href: '/' },
+                { label: 'Help Me Choose', href: '/' },
+                { label: 'Mac Accessories', href: '/' },
+                { label: 'Apple Trade In', href: '/' },
+                { label: 'Financing', href: '/' },
+              ]
+            },
+            { 
+              label: 'More from Mac', 
+              isLarge: false,
+              subitems: [
+                { label: 'Mac Support', href: '/' },
+                { label: 'AppleCare+ for Mac', href: '/' },
+                { label: 'macOS Sequoia', href: '/' },
+                { label: 'Apple intelligence', href: '/' },
+                { label: 'Apps by Apple', href: '/' },
+                { label: 'Continuity', href: '/' },
+                { label: 'iCloud+', href: '/' },
+                { label: 'Mac for Business', href: '/' },
+                { label: 'Education', href: '/' },
+              ]
+            },
+
+            ]}
+           />
+          {/* //////////////7/////// */}
+          <NavItem
+          label="AirPods" 
+          items={[
+            { 
+              label: 'Explore Mac', 
+              isLarge: true,
+              subitems: [
+                { label: 'Explore All Mac', href: "/" },
+                { label: 'MacBook Air', href: '/' },
+                { label: 'MacBook Pro', href: '/' },
+                { label: 'iMac', href: '/' },
+                { label: 'Mac mini', href: '/' },
+                { label: 'Mac Studio', href: '/' },
+                { label: 'Mac Pro', href: '/' },
+                { label: 'Display', href: '/' },
+              ]
+            },
+            { 
+              label: 'Shop Mac', 
+              isLarge: false,
+              subitems: [
+                { label: 'Shop Mac', href: '/' },
+                { label: 'Help Me Choose', href: '/' },
+                { label: 'Mac Accessories', href: '/' },
+                { label: 'Apple Trade In', href: '/' },
+                { label: 'Financing', href: '/' },
+              ]
+            },
+            { 
+              label: 'More from Mac', 
+              isLarge: false,
+              subitems: [
+                { label: 'Mac Support', href: '/' },
+                { label: 'AppleCare+ for Mac', href: '/' },
+                { label: 'macOS Sequoia', href: '/' },
+                { label: 'Apple intelligence', href: '/' },
+                { label: 'Apps by Apple', href: '/' },
+                { label: 'Continuity', href: '/' },
+                { label: 'iCloud+', href: '/' },
+                { label: 'Mac for Business', href: '/' },
+                { label: 'Education', href: '/' },
+              ]
+            },
+
+            ]}
+           />
+          {/* //////////////8/////// */}
+          <NavItem
+          label="TV & Home" 
+          items={[
+            { 
+              label: 'Explore Mac', 
+              isLarge: true,
+              subitems: [
+                { label: 'Explore All Mac', href: "/" },
+                { label: 'MacBook Air', href: '/' },
+                { label: 'MacBook Pro', href: '/' },
+                { label: 'iMac', href: '/' },
+                { label: 'Mac mini', href: '/' },
+                { label: 'Mac Studio', href: '/' },
+                { label: 'Mac Pro', href: '/' },
+                { label: 'Display', href: '/' },
+              ]
+            },
+            { 
+              label: 'Shop Mac', 
+              isLarge: false,
+              subitems: [
+                { label: 'Shop Mac', href: '/' },
+                { label: 'Help Me Choose', href: '/' },
+                { label: 'Mac Accessories', href: '/' },
+                { label: 'Apple Trade In', href: '/' },
+                { label: 'Financing', href: '/' },
+              ]
+            },
+            { 
+              label: 'More from Mac', 
+              isLarge: false,
+              subitems: [
+                { label: 'Mac Support', href: '/' },
+                { label: 'AppleCare+ for Mac', href: '/' },
+                { label: 'macOS Sequoia', href: '/' },
+                { label: 'Apple intelligence', href: '/' },
+                { label: 'Apps by Apple', href: '/' },
+                { label: 'Continuity', href: '/' },
+                { label: 'iCloud+', href: '/' },
+                { label: 'Mac for Business', href: '/' },
+                { label: 'Education', href: '/' },
+              ]
+            },
+
+            ]}
+           />
+          {/* //////////////9/////// */}
+          <NavItem
+          label="Entertainment" 
+          items={[
+            { 
+              label: 'Explore Mac', 
+              isLarge: true,
+              subitems: [
+                { label: 'Explore All Mac', href: "/" },
+                { label: 'MacBook Air', href: '/' },
+                { label: 'MacBook Pro', href: '/' },
+                { label: 'iMac', href: '/' },
+                { label: 'Mac mini', href: '/' },
+                { label: 'Mac Studio', href: '/' },
+                { label: 'Mac Pro', href: '/' },
+                { label: 'Display', href: '/' },
+              ]
+            },
+            { 
+              label: 'Shop Mac', 
+              isLarge: false,
+              subitems: [
+                { label: 'Shop Mac', href: '/' },
+                { label: 'Help Me Choose', href: '/' },
+                { label: 'Mac Accessories', href: '/' },
+                { label: 'Apple Trade In', href: '/' },
+                { label: 'Financing', href: '/' },
+              ]
+            },
+            { 
+              label: 'More from Mac', 
+              isLarge: false,
+              subitems: [
+                { label: 'Mac Support', href: '/' },
+                { label: 'AppleCare+ for Mac', href: '/' },
+                { label: 'macOS Sequoia', href: '/' },
+                { label: 'Apple intelligence', href: '/' },
+                { label: 'Apps by Apple', href: '/' },
+                { label: 'Continuity', href: '/' },
+                { label: 'iCloud+', href: '/' },
+                { label: 'Mac for Business', href: '/' },
+                { label: 'Education', href: '/' },
+              ]
+            },
+
+            ]}
+           />
+          {/* //////////////10/////// */}
+          <NavItem
+          label="Accessories" 
+          items={[
+            { 
+              label: 'Explore Mac', 
+              isLarge: true,
+              subitems: [
+                { label: 'Explore All Mac', href: "/" },
+                { label: 'MacBook Air', href: '/' },
+                { label: 'MacBook Pro', href: '/' },
+                { label: 'iMac', href: '/' },
+                { label: 'Mac mini', href: '/' },
+                { label: 'Mac Studio', href: '/' },
+                { label: 'Mac Pro', href: '/' },
+                { label: 'Display', href: '/' },
+              ]
+            },
+            { 
+              label: 'Shop Mac', 
+              isLarge: false,
+              subitems: [
+                { label: 'Shop Mac', href: '/' },
+                { label: 'Help Me Choose', href: '/' },
+                { label: 'Mac Accessories', href: '/' },
+                { label: 'Apple Trade In', href: '/' },
+                { label: 'Financing', href: '/' },
+              ]
+            },
+            { 
+              label: 'More from Mac', 
+              isLarge: false,
+              subitems: [
+                { label: 'Mac Support', href: '/' },
+                { label: 'AppleCare+ for Mac', href: '/' },
+                { label: 'macOS Sequoia', href: '/' },
+                { label: 'Apple intelligence', href: '/' },
+                { label: 'Apps by Apple', href: '/' },
+                { label: 'Continuity', href: '/' },
+                { label: 'iCloud+', href: '/' },
+                { label: 'Mac for Business', href: '/' },
+                { label: 'Education', href: '/' },
+              ]
+            },
+
+            ]}
+           />
+          {/* //////////////11/////// */}
+          <NavItem
+          label="Support" 
+          items={[
+            { 
+              label: 'Explore Mac', 
+              isLarge: true,
+              subitems: [
+                { label: 'Explore All Mac', href: "/" },
+                { label: 'MacBook Air', href: '/' },
+                { label: 'MacBook Pro', href: '/' },
+                { label: 'iMac', href: '/' },
+                { label: 'Mac mini', href: '/' },
+                { label: 'Mac Studio', href: '/' },
+                { label: 'Mac Pro', href: '/' },
+                { label: 'Display', href: '/' },
+              ]
+            },
+            { 
+              label: 'Shop Mac', 
+              isLarge: false,
+              subitems: [
+                { label: 'Shop Mac', href: '/' },
+                { label: 'Help Me Choose', href: '/' },
+                { label: 'Mac Accessories', href: '/' },
+                { label: 'Apple Trade In', href: '/' },
+                { label: 'Financing', href: '/' },
+              ]
+            },
+            { 
+              label: 'More from Mac', 
+              isLarge: false,
+              subitems: [
+                { label: 'Mac Support', href: '/' },
+                { label: 'AppleCare+ for Mac', href: '/' },
+                { label: 'macOS Sequoia', href: '/' },
+                { label: 'Apple intelligence', href: '/' },
+                { label: 'Apps by Apple', href: '/' },
+                { label: 'Continuity', href: '/' },
+                { label: 'iCloud+', href: '/' },
+                { label: 'Mac for Business', href: '/' },
+                { label: 'Education', href: '/' },
+              ]
+            },
+
+            ]}
+           />
+          
+          {/* //////////////12/////// */}
+          <NavItem
+          label= {<svg xmlns="http://www.w3.org/2000/svg" width="15px" height="44px" viewBox="0 0 15 44">
+          <path d="M14.298,27.202l-3.87-3.87c0.701-0.929,1.122-2.081,1.122-3.332c0-3.06-2.489-5.55-5.55-5.55c-3.06,0-5.55,2.49-5.55,5.55 c0,3.061,2.49,5.55,5.55,5.55c1.251,0,2.403-0.421,3.332-1.122l3.87,3.87c0.151,0.151,0.35,0.228,0.548,0.228 s0.396-0.076,0.548-0.228C14.601,27.995,14.601,27.505,14.298,27.202z M1.55,20c0-2.454,1.997-4.45,4.45-4.45 c2.454,0,4.45,1.997,4.45,4.45S8.454,24.45,6,24.45C3.546,24.45,1.55,22.454,1.55,20z"></path>
+            </svg> }
+           />
+          {/* //////////////13/////// */}
+          <NavItem
+          label= {<svg height="44" viewBox="0 0 14 44" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m11.3535 16.0283h-1.0205a3.4229 3.4229 0 0 0 -3.333-2.9648 3.4229 3.4229 0 0 0 -3.333 2.9648h-1.02a2.1184 2.1184 0 0 0 -2.117 2.1162v7.7155a2.1186 2.1186 0 0 0 2.1162 2.1167h8.707a2.1186 2.1186 0 0 0 2.1168-2.1167v-7.7155a2.1184 2.1184 0 0 0 -2.1165-2.1162zm-4.3535-1.8652a2.3169 2.3169 0 0 1 2.2222 1.8652h-4.4444a2.3169 2.3169 0 0 1 2.2222-1.8652zm5.37 11.6969a1.0182 1.0182 0 0 1 -1.0166 1.0171h-8.7069a1.0182 1.0182 0 0 1 -1.0165-1.0171v-7.7155a1.0178 1.0178 0 0 1 1.0166-1.0166h8.707a1.0178 1.0178 0 0 1 1.0164 1.0166z"></path></svg> }
+           />
           
       </ul>
           
@@ -67,37 +553,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-
-
-
-{/* <div className='flex gap-12 pb-5 w-screen'>
-
-<div className=' flex flex-col gap-1 mx-2  '>
-    <p className='text-slate-400'>Shop</p>
-   <Link to="/" className="text-2xl font-bold no-underline text-black">Shop the Latest</Link>
-   <Link to="/" className="text-2xl font-bold no-underline text-black">Mac</Link>
-   <Link to="/" className="text-2xl font-bold no-underline text-black">iPad</Link>
-   <Link to="/" className="text-2xl font-bold no-underline text-black">iPhone</Link>
-   <Link to="/" className="text-2xl font-bold no-underline text-black">Apple Watch</Link>
-   <Link to="/" className="text-2xl font-bold no-underline text-black">Apple Vision Pro</Link>
-   <Link to="/" className="text-2xl font-bold no-underline text-black">Accessories</Link>
-</div>
-
-<div className=' flex flex-col gap-1 '>
-    <p className='text-slate-400'>Quick Links</p>
-   <Link to="/" className="text-sm font-bold  no-underline text-black">Shop Holiday Gift</Link>
-   <Link to="/" className="text-sm font-bold no-underline text-black">Find a Store</Link>
-   <Link to="/" className="text-sm font-bold no-underline text-black">Order Status</Link>
-   <Link to="/" className="text-sm font-bold no-underline text-black">Apple Trade In</Link>
-   <Link to="/" className="text-sm font-bold no-underline text-black">Financing</Link>
-</div>
-
-<div className=' flex flex-col gap-1  '>
-    <p className='text-slate-400'>Shop Special Stores</p>
-   <Link to="/" className="text-sm font-bold no-underline text-black">Certified Refurbished</Link>
-   <Link to="/" className="text-sm font-bold no-underline text-black">Education</Link>
-   <Link to="/" className="text-sm font-bold no-underline text-black">Business</Link>
-   <Link to="/" className="text-sm font-bold no-underline text-black">Veterans and Military</Link>
-   <Link to="/" className="text-sm font-bold no-underline text-black">Government</Link>
-</div>
-</div> */}

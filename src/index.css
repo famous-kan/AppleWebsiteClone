@@ -246,3 +246,46 @@ html, body {
 .dropdown-content a:hover {
   background-color: #f1f1f1;
 }
+
+
+.slide-down {
+  position: fixed;  
+  top: 55%;           
+  left: 50%;           /* ตั้งให้เริ่มจากกลางหน้าจอในแนวนอน */
+  transform: translate(-50%, -50%);  /* เคลื่อนที่จากกลางหน้าจอและเลื่อนขึ้น 60% ของความสูง */
+  animation: slideDown 1s ease-in-out  ;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translate(-50%, -50.5%);  /* เริ่มต้นที่ 60% ของความสูงจากกลางหน้าจอ */
+  }
+  to {
+    transform: translate(-50%, -50%);  /* สุดท้ายตำแหน่งอยู่ที่กลางหน้าจอ */
+  }
+}
+
+
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.7s forwards;
+  margin-bottom: 10px; 
+}
+
+/* Create the fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
